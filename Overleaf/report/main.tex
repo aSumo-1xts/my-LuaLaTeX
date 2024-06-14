@@ -1,0 +1,45 @@
+\RequirePackage{plautopatch}
+\documentclass[lualatex]{jlreq}
+
+% ----------プリアンブルここから----------
+
+\usepackage[match]{luatexja-fontspec}
+  \setmainfont[
+    BoldFont            = Harano Aji Gothic,
+    BoldFeatures        = {FakeBold=2},
+    ItalicFeatures      = {FakeSlant=0.33},
+  ]{Harano Aji Mincho}
+  \setsansfont[
+    BoldFeatures        = {FakeBold=2},
+    ItalicFeatures      = {FakeSlant=0.33},
+  ]{Harano Aji Gothic}
+  \setmonofont{Noto Sans Mono CJK JP}
+
+\input{usepackage.tex}
+  % \setlength\parindent{0pt}
+
+% ----------プリアンブルここまで----------
+
+\begin{document}
+
+\begin{flushleft}
+  \today
+\end{flushleft}
+
+\begin{flushright}
+  氏名：ほげ太郎\\ 学籍番号：hoge0123
+\end{flushright}
+\vspace{2\zh}
+
+\begin{center}
+  {\Large ほげ演習　ほげ課題}
+\end{center}
+\vspace{3\zh}
+
+% ----------hoge----------
+
+\input{honbun.tex}
+
+% ----------hoge----------
+
+\end{document}

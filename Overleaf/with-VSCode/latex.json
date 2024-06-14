@@ -1,0 +1,166 @@
+{
+    "kaigyo": {
+        "prefix": "@p",
+        "body": [
+            "\\\\\\\\",
+            ""
+        ],
+        "description": "怒りの改行"
+    },
+
+	"align": {
+		"prefix": "@align",
+		"body": [
+			"\\begin{align}",
+			"",
+			"\\end{align}"
+		],
+		"description": "複数行の式"
+	},
+
+	"gazou": {
+		"prefix": "@gazou",
+		"body": [
+			"\\begin{figure}[H]",
+			"\\begin{center}",
+				"\\includegraphics[keepaspectratio=true, scale=0.5]{test.png}",
+			"\\end{center}",
+			"\\caption{カラーコードは039393}",
+			"\\label{fig:test.png}",
+			"\\end{figure}\\vspace{2\\zh}"
+		],
+		"description": "画像貼り付け"
+	},
+	
+	"kugiri":{
+		"prefix": "@kugiri",
+		"body": [
+			"% ----------hoge----------"
+		],
+		"description": "区切り線"
+	},
+
+    "code": {
+        "prefix": "@code",
+        "body": [
+            "\\lstinputlisting[caption=サンプル, language=C]{sample.c}"
+        ],
+        "description": "外部ソースコードの挿入"
+    },
+
+	"report": {
+        "prefix": "@report",
+        "body": [
+            "\\RequirePackage{plautopatch}",
+            "\\documentclass[lualatex]{jlreq}",
+            "",
+            "% ----------プリアンブルここから----------",
+            "",
+            "\\usepackage[match]{luatexja-fontspec}",
+            "  \\setmainfont[",
+            "    BoldFont            = Harano Aji Gothic,",
+            "    BoldFeatures        = {FakeBold=2},",
+            "    ItalicFeatures      = {FakeSlant=0.33},",
+            "  ]{Harano Aji Mincho}",
+            "  \\setsansfont[",
+            "    BoldFeatures        = {FakeBold=2},",
+            "    ItalicFeatures      = {FakeSlant=0.33},",
+            "  ]{Harano Aji Gothic}",
+            "  \\setmonofont{Noto Sans Mono CJK JP}",
+            "",
+            "\\input{usepackage.tex}",
+            "  % \\setlength\\parindent{0pt}",
+            "",
+            "% ----------プリアンブルここまで----------",
+            "",
+            "\\begin{document}",
+            "",
+            "\\begin{flushleft}",
+            "  \\today",
+            "\\end{flushleft}",
+            "",
+            "\\begin{flushright}",
+            "  氏名：岸村颯馬\\\\\\\\ 学籍番号：202420745",
+            "\\end{flushright}",
+            "\\vspace{2\\zh}",
+            "",
+            "\\begin{center}",
+            "  {\\Large ほげ演習　ほげ課題}",
+            "\\end{center}",
+            "\\vspace{3\\zh}",
+            "",
+            "% ----------hoge----------",
+            "",
+            "",
+            "",
+            "% ----------hoge----------",
+            "",
+            "\\end{document}"
+        ],
+        "description": "講義などのレポート全般"
+    },
+
+    "usepackage": {
+        "prefix": "@usepackage",
+        "body": [
+            "\\usepackage{longtable, colortab, colortbl, arydshln}  % 表とその点線",
+            "\\usepackage{mathtools, autobreak, amssymb}            % 数式",
+            "  \\mathtoolsset{showonlyrefs=true}",
+            "\\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}                                            % 余白",
+            "\\usepackage{comment, emoji, xurl}                     % コメント，絵文字, URL",
+            "\\usepackage{ascmac, fancybox}",
+            "",
+            "\\usepackage{graphicx, here}                           % 画像，貼る場所",
+            "\\usepackage{xcolor}                                   % 色",
+            "  \\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}",
+            "  \\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}",
+            "  \\definecolor{ferngreen}{rgb}{0.31, 0.47, 0.26}",
+            "  \\definecolor{whitesmoke}{rgb}{0.97, 0.97, 0.97}",
+            "",
+            "\\usepackage{tikz}                                     % 描画",
+            "  \\usetikzlibrary{intersections, calc, arrows.meta}",
+            "\\usepackage{coffeestains, scsnowman, randomwalk}      % おまけ",
+            "\\usepackage{pdfpages}                                 % PDFの結合",
+            "",
+            "\\usepackage{listings}                                 % ソースコードの挿入",
+            "  \\lstset{",
+            "    basicstyle          =   \\ttfamily,",
+            "    keywordstyle        =   \\color{cornellred},   ",
+            "    backgroundcolor     =   \\color{whitesmoke},",
+            "    identifierstyle     =   \\color{ceruleanblue},",
+            "    commentstyle        =   \\color{ferngreen},",
+            "    numberstyle         =   \\footnotesize,",
+            "    numbers             =   left,",
+            "    stepnumber          =   1,",
+            "    numbersep           =   15pt,",
+            "    frame               =   lines,",
+            "    frameround          =   ffff,",
+            "    framesep            =   5pt,",
+            "    breaklines          =   true,",
+            "    breakautoindent     =   true,",
+            "    breakatwhitespace   =   true,",
+            "    breakindent         =   25pt,",
+            "    showspaces          =   false,",
+            "    showstringspaces    =   false,",
+            "    showtabs            =   true,",
+            "    tabsize             =   2,",
+            "    captionpos          =   b,",
+            "    linewidth           =   \\textwidth,",
+            "  }",
+            "  \\renewcommand{\\lstlistingname}{ソースコード}",
+            "",
+            "\\usepackage[luatex]{hyperref}                         % ハイパーリンク",
+            "  \\hypersetup{",
+            "    setpagesize       = false,",
+            "    bookmarksnumbered = true,",
+            "    bookmarksopen     = true,",
+            "    colorlinks        = true,",
+            "    linkcolor         = black,",
+            "    citecolor         = black,",
+            "    urlcolor          = blue,",
+            "  }"
+        ],
+        "description": "usepackage.tex"
+    }
+
+}
