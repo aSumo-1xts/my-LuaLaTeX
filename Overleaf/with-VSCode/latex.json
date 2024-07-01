@@ -13,7 +13,7 @@
 		"body": [
 			"\\begin{align}",
 			"",
-			"\\end{align}"
+			"\\end{align}",
 		],
 		"description": "複数行の式"
 	},
@@ -27,7 +27,7 @@
 			"\\end{center}",
 			"\\caption{カラーコードは039393}",
 			"\\label{fig:test.png}",
-			"\\end{figure}\\vspace{2\\zh}"
+			"\\end{figure}\\vspace{2\\zh}",
 		],
 		"description": "画像貼り付け"
 	},
@@ -43,7 +43,7 @@
     "code": {
         "prefix": "@code",
         "body": [
-            "\\lstinputlisting[caption=サンプル, language=C]{sample.c}"
+            "\\lstinputlisting[caption=サンプル, language=C]{sample.c}",
         ],
         "description": "外部ソースコードの挿入"
     },
@@ -55,18 +55,6 @@
             "\\documentclass[lualatex]{jlreq}",
             "",
             "% ----------プリアンブルここから----------",
-            "",
-            "\\usepackage[match]{luatexja-fontspec}",
-            "  \\setmainfont[",
-            "    BoldFont            = Harano Aji Gothic,",
-            "    BoldFeatures        = {FakeBold=2},",
-            "    ItalicFeatures      = {FakeSlant=0.33},",
-            "  ]{Harano Aji Mincho}",
-            "  \\setsansfont[",
-            "    BoldFeatures        = {FakeBold=2},",
-            "    ItalicFeatures      = {FakeSlant=0.33},",
-            "  ]{Harano Aji Gothic}",
-            "  \\setmonofont{Noto Sans Mono CJK JP}",
             "",
             "\\input{usepackage.tex}",
             "  % \\setlength\\parindent{0pt}",
@@ -80,7 +68,7 @@
             "\\end{flushleft}",
             "",
             "\\begin{flushright}",
-            "  氏名：岸村颯馬\\\\\\\\ 学籍番号：202420745",
+            "  氏名：ほげ\\\\\\\\ 学籍番号：0123456789",
             "\\end{flushright}",
             "\\vspace{2\\zh}",
             "",
@@ -95,72 +83,9 @@
             "",
             "% ----------hoge----------",
             "",
-            "\\end{document}"
+            "\\end{document}",
         ],
         "description": "講義などのレポート全般"
-    },
-
-    "usepackage": {
-        "prefix": "@usepackage",
-        "body": [
-            "\\usepackage{longtable, colortab, colortbl, arydshln}  % 表とその点線",
-            "\\usepackage{mathtools, autobreak, amssymb}            % 数式",
-            "  \\mathtoolsset{showonlyrefs=true}",
-            "\\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}                                            % 余白",
-            "\\usepackage{comment, emoji, xurl}                     % コメント，絵文字, URL",
-            "\\usepackage{ascmac, fancybox}",
-            "",
-            "\\usepackage{graphicx, here}                           % 画像，貼る場所",
-            "\\usepackage{xcolor}                                   % 色",
-            "  \\definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}",
-            "  \\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}",
-            "  \\definecolor{ferngreen}{rgb}{0.31, 0.47, 0.26}",
-            "  \\definecolor{whitesmoke}{rgb}{0.97, 0.97, 0.97}",
-            "",
-            "\\usepackage{tikz}                                     % 描画",
-            "  \\usetikzlibrary{intersections, calc, arrows.meta}",
-            "\\usepackage{coffeestains, scsnowman, randomwalk}      % おまけ",
-            "\\usepackage{pdfpages}                                 % PDFの結合",
-            "",
-            "\\usepackage{listings}                                 % ソースコードの挿入",
-            "  \\lstset{",
-            "    basicstyle          =   \\ttfamily,",
-            "    keywordstyle        =   \\color{cornellred},   ",
-            "    backgroundcolor     =   \\color{whitesmoke},",
-            "    identifierstyle     =   \\color{ceruleanblue},",
-            "    commentstyle        =   \\color{ferngreen},",
-            "    numberstyle         =   \\footnotesize,",
-            "    numbers             =   left,",
-            "    stepnumber          =   1,",
-            "    numbersep           =   15pt,",
-            "    frame               =   lines,",
-            "    frameround          =   ffff,",
-            "    framesep            =   5pt,",
-            "    breaklines          =   true,",
-            "    breakautoindent     =   true,",
-            "    breakatwhitespace   =   true,",
-            "    breakindent         =   25pt,",
-            "    showspaces          =   false,",
-            "    showstringspaces    =   false,",
-            "    showtabs            =   true,",
-            "    tabsize             =   2,",
-            "    captionpos          =   b,",
-            "    linewidth           =   \\textwidth,",
-            "  }",
-            "  \\renewcommand{\\lstlistingname}{ソースコード}",
-            "",
-            "\\usepackage[luatex]{hyperref}                         % ハイパーリンク",
-            "  \\hypersetup{",
-            "    setpagesize       = false,",
-            "    bookmarksnumbered = true,",
-            "    bookmarksopen     = true,",
-            "    colorlinks        = true,",
-            "    linkcolor         = black,",
-            "    citecolor         = black,",
-            "    urlcolor          = blue,",
-            "  }"
-        ],
-        "description": "usepackage.tex"
     },
 
     "()": {
@@ -209,6 +134,40 @@
             "\\mleft\\lVert - \\mright\\rVert",
         ],
         "description": "ノルム括弧が良い感じになるやつ"
-    }
+    },
 
+    "table": {
+        "prefix": "@table",
+        "body": [
+            "\\begin{table}[hbtp]",
+            "  \\caption{ほげ}",
+            "  \\label{table:hoge}",
+            "  \\centering",
+            "  \\begin{tabular}{|lr||l|p{50mm}|||} % 長さ指定も可能",
+            "    \\hline",
+            "    物理量 & 記号 & 値 & 備考 \\\\\\\\",
+            "    \\hline\\hline",
+            "    \\multicolumn{4}{|l|||}{割り込み可能：左寄せ}\\\\\\\\",
+            "    \\hline",
+            "    真空中の光速   & \\$c\\$      & 299792458            & 定義 \\\\\\\\",
+            "    真空中の透磁率 & \\$\\mu_0\\$  & \\$4\\pi\\times 10^{-7}\\$ & 定義 \\\\\\\\",
+            "    \\hline",
+            "    \\multicolumn{3}{|c|}{部分的に割り込み可能：中央揃え} & ここを余らせる \\\\\\\\",
+            "    \\hline",
+            "    ボルツマン定数 & \\$k\\$ & 1.381e-23      & 測定値 \\\\\\\\",
+            "    プランク定数   & \\$h\\$ & 6.62606876e-34 & 測定値 \\\\\\\\",
+            "    \\hline",
+            "    \\end{tabular}",
+            "\\end{table}",
+        ],
+        "description": "表を立てる"
+    },
+
+    "vs": {
+        "prefix": "@vs",
+        "body": [
+            "\\vspace{1\\zh}",
+        ],
+        "description": "縦1行分の空白"
+    },
 }

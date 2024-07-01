@@ -1,29 +1,24 @@
-\usepackage{longtable, colortab, colortbl, arydshln}  % 表とその点線
-\usepackage{mathtools, autobreak, amssymb, mleftright}% 数式
+\usepackage{longtable, colortab, colortbl, arydshln}    % 表とその点線
+\usepackage{mathtools, autobreak, amssymb, mleftright}  % 数式
   \mathtoolsset{showonlyrefs=true}
-\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
-\usepackage{comment, emoji, xurl}                     % コメント，絵文字, URL
-\usepackage{ascmac, fancybox}
-
-\usepackage{graphicx, here}                           % 画像，貼る場所
-\usepackage{xcolor}                                   % 色
-  \definecolor{cornellred}{rgb}{0.7, 0.11, 0.11}
-  \definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
-  \definecolor{ferngreen}{rgb}{0.31, 0.47, 0.26}
+\usepackage[top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage[dvipsnames]{xcolor}                         % 色
   \definecolor{whitesmoke}{rgb}{0.97, 0.97, 0.97}
-
-\usepackage{tikz}                                     % 描画
+\usepackage{comment, emoji, xurl}                       % コメント、絵文字、URL
+\usepackage{ascmac, fancybox, tcolorbox}                % 枠
+  \tcbuselibrary{raster, skins, breakable, theorems}
+\usepackage{graphicx, here, pdfpages}                   % 画像、貼る場所、PDF結合
+\usepackage{tikz}                                       % 描画
   \usetikzlibrary{intersections, calc, arrows.meta}
-\usepackage{coffeestains, scsnowman, randomwalk}      % おまけ
-\usepackage{pdfpages}                                 % PDFの結合
+\usepackage{coffeestains, scsnowman, randomwalk}        % おまけ
 
-\usepackage{listings}                                 % ソースコードの挿入
+\usepackage{listings}                                   % ソースコードの挿入
   \lstset{
     basicstyle          =   \ttfamily,
-    keywordstyle        =   \color{cornellred},   
+    keywordstyle        =   \color{Brickred},   
     backgroundcolor     =   \color{whitesmoke},
-    identifierstyle     =   \color{ceruleanblue},
-    commentstyle        =   \color{ferngreen},
+    identifierstyle     =   \color{Cerulean},
+    commentstyle        =   \color{OliveGreen},
     numberstyle         =   \footnotesize,
     numbers             =   left,
     stepnumber          =   1,
@@ -44,7 +39,7 @@
   }
   \renewcommand{\lstlistingname}{ソースコード}
 
-\usepackage[luatex]{hyperref}                         % ハイパーリンク
+\usepackage[luatex]{hyperref}                           % ハイパーリンク
   \hypersetup{
     setpagesize       = false,
     bookmarksnumbered = true,
@@ -54,3 +49,49 @@
     citecolor         = black,
     urlcolor          = blue,
   }
+
+% ----------hoge----------
+% ----------hoge----------
+% ----------hoge----------
+
+\newenvironment{bluebox}[1]{
+  \vspace{1\zh}
+    \begin{tcolorbox}[
+        colframe = RoyalBlue,
+        colback = RoyalBlue!10!White,
+        title = {#1},
+        fonttitle = \bfseries,
+        breakable = true
+    ]
+}{ \end{tcolorbox} }
+
+\newenvironment{yellowbox}[1]{
+    \vspace{1\zh}
+    \begin{tcolorbox}[
+        colframe = Yellow!40!Orange,
+        colback = Yellow!20!White,
+        title = {#1},
+        fonttitle = \color{Black} \bfseries,
+        breakable = true
+    ]
+}{ \end{tcolorbox} }
+
+\newenvironment{greenbox}[1]{
+    \begin{tcolorbox}[
+        colframe = OliveGreen,
+        colback = ForestGreen!20!White,
+        title = {#1},
+        fonttitle = \bfseries,
+        breakable = true
+    ]
+}{ \end{tcolorbox} }
+
+\newenvironment{redbox}[1]{
+    \begin{tcolorbox}[
+        colframe = Maroon,
+        colback = Dandelion!20!Brown!10!White,
+        title = {#1},
+        fonttitle = \color{White} \bfseries,
+        breakable = true
+    ]
+}{ \end{tcolorbox} }
