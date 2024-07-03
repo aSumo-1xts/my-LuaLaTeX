@@ -22,11 +22,11 @@
 		"prefix": "@gazou",
 		"body": [
 			"\\begin{figure}[H]",
-			"\\begin{center}",
-				"\\includegraphics[keepaspectratio=true, scale=0.5]{test.png}",
-			"\\end{center}",
-			"\\caption{カラーコードは039393}",
-			"\\label{fig:test.png}",
+			    "\\begin{center}",
+				    "\\includegraphics[keepaspectratio=true, scale=0.5]{test.png}",
+			    "\\end{center}",
+			    "\\caption{カラーコードは039393}",
+			    "\\label{fig:test.png}",
 			"\\end{figure}\\vspace{2\\zh}",
 		],
 		"description": "画像貼り付け"
