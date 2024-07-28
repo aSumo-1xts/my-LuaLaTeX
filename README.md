@@ -14,7 +14,3 @@ Overleaf上でLuaLaTeXを書くときのテンプレートなど
 ### report
 
 専ら大学の課題用のテンプレート
-
-### with-VSCode
-
-VSCode上でOverleafを動かすときに便利なスニペットなど
